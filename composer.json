@@ -1,0 +1,42 @@
+{
+    "name": "ecphp/laravel-ecas",
+    "description": "A bundle for Laravel, providing authentication against European Commission Authentication System (ECAS) server.",
+    "license": "BSD-3-Clause",
+    "keywords": [
+        "authentication",
+        "cas",
+        "ecas",
+        "central authentication service",
+        "single sign-on",
+        "sso"
+    ],
+    "homepage": "https://github.com/ecphp/",
+    "require": {
+        "php": ">= 8.0.2",
+        "ext-dom": "*",
+        "ext-json": "*",
+        "ext-libxml": "*",
+        "ext-simplexml": "*",
+        "ecphp/ecas": "^3.0",
+        "ecphp/laravel-cas": "dev-main",
+        "laravel/framework": "^9.0"
+    },
+    "require-dev": {
+        "ecphp/php-conventions": "^1.0",
+        "guzzlehttp/guzzle": "^7.5",
+        "phpstan/phpstan-strict-rules": "^1.4"
+    },
+    "suggest": {},
+    "autoload": {
+        "psr-4": {
+            "EcPhp\\LaravelEcas\\": "src/"
+        }
+    },
+    "config": {
+        "allow-plugins": {
+            "phpstan/extension-installer": true,
+            "phpro/grumphp": true,
+            "ergebnis/composer-normalize": true
+        }
+    }
+}
