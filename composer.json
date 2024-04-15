@@ -24,7 +24,12 @@
     "require-dev": {
         "ecphp/php-conventions": "^1.0",
         "guzzlehttp/guzzle": "^7.5",
-        "phpstan/phpstan-strict-rules": "^1.4"
+        "phpstan/phpstan-strict-rules": "^1.4",
+        "orchestra/testbench": "^8.22",
+        "nyholm/psr7": "^1.5",
+        "symfony/cache": "^6.2",
+        "symfony/psr-http-message-bridge": "^2.1"
+        
     },
     "suggest": {},
     "autoload": {
@@ -32,6 +37,12 @@
             "EcPhp\\LaravelEcas\\": "src/"
         }
     },
+    "autoload-dev": {
+        "psr-4": {
+          "EcPhp\\LaravelEcas\\Tests\\": "tests/",
+          "App\\": "vendor/orchestra/testbench-core/laravel/app"
+        }
+      },
     "config": {
         "allow-plugins": {
             "phpstan/extension-installer": true,
