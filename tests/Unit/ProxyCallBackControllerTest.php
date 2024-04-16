@@ -13,11 +13,16 @@ namespace Tests\Unit;
 
 use EcPhp\LaravelEcas\Tests\TestCase;
 
-class ProxyCallbackControllerTest extends TestCase
+/**
+ * @internal
+ *
+ * @coversNothing
+ */
+final class ProxyCallBackControllerTest extends TestCase
 {
     private $response;
 
-    public function setUp(): void
+    protected function setUp(): void
     {
         parent::setUp();
         $this->response = $this->get(route('laravel-cas-proxy-callback'));
@@ -25,12 +30,12 @@ class ProxyCallbackControllerTest extends TestCase
 
     public function testIfNotFalse()
     {
-        $this->assertNotFalse($this->response);
+        self::assertNotFalse($this->response);
     }
 
     public function testIfXml()
     {
         $xml = '<?xml version="1.0" encoding="utf-8"?><proxySuccess xmlns="http://www.yale.edu/tp/casClient" />';
-        $this->assertEquals($xml, $this->response->getContent());
+        self::assertEquals($xml, $this->response->getContent());
     }
 }

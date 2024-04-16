@@ -18,9 +18,7 @@ use function array_key_exists;
 
 final class EcasUser implements Authenticatable
 {
-    public function __construct(private CasUser $user)
-    {
-    }
+    public function __construct(private CasUser $user) {}
 
     public function __toString(): string
     {
@@ -173,7 +171,5 @@ final class EcasUser implements Authenticatable
         return $this->user->getAttribute('userManager');
     }
 
-    public function setRememberToken($value): void
-    {
-    }
+    public function setRememberToken($value): void {}
 }

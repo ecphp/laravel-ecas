@@ -15,13 +15,18 @@ use EcPhp\CasLib\Contract\CasInterface;
 use EcPhp\Ecas\Ecas;
 use EcPhp\LaravelEcas\Tests\TestCase;
 
-class CasInterfaceTest extends TestCase
+/**
+ * @internal
+ *
+ * @coversNothing
+ */
+final class CasInterfaceTest extends TestCase
 {
     private $response;
 
     public function testIfEcas()
     {
         $casInterface = app()->make(CasInterface::class);
-        $this->assertInstanceOf(Ecas::class, $casInterface);
+        self::assertInstanceOf(Ecas::class, $casInterface);
     }
 }
