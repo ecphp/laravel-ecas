@@ -45,5 +45,12 @@
             "phpro/grumphp": true,
             "phpstan/extension-installer": true
         }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "EcPhp\\LaravelEcas\\Providers\\LaravelEcasProvider"
+            ]
+        }
     }
 }
