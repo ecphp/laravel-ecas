@@ -12,10 +12,8 @@
     ],
     "homepage": "https://github.com/ecphp/",
     "require": {
-        "php": ">= 8.0.2",
+        "php": ">= 8.1",
         "ext-dom": "*",
-        "ext-json": "*",
-        "ext-libxml": "*",
         "ext-simplexml": "*",
         "ecphp/ecas": "^3.0",
         "ecphp/laravel-cas": "0.0.1",
@@ -24,7 +22,11 @@
     "require-dev": {
         "ecphp/php-conventions": "^1.0",
         "guzzlehttp/guzzle": "^7.5",
-        "phpstan/phpstan-strict-rules": "^1.4"
+        "nyholm/psr7": "^1.5",
+        "orchestra/testbench": "^8.22",
+        "phpstan/phpstan-strict-rules": "^1.4",
+        "symfony/cache": "^6.2",
+        "symfony/psr-http-message-bridge": "^2.1"
     },
     "suggest": {},
     "autoload": {
@@ -32,11 +34,23 @@
             "EcPhp\\LaravelEcas\\": "src/"
         }
     },
+    "autoload-dev": {
+        "psr-4": {
+            "EcPhp\\LaravelEcas\\Tests\\": "tests/"
+        }
+    },
     "config": {
         "allow-plugins": {
-            "phpstan/extension-installer": true,
+            "ergebnis/composer-normalize": true,
             "phpro/grumphp": true,
-            "ergebnis/composer-normalize": true
+            "phpstan/extension-installer": true
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "EcPhp\\LaravelEcas\\Providers\\LaravelEcasProvider"
+            ]
         }
     }
 }

@@ -20,8 +20,7 @@ final class EcasUserProvider implements UserProvider
 {
     public function __construct(
         private CasUserProvider $casUserProvider
-    ) {
-    }
+    ) {}
 
     public function retrieveByCredentials(array $credentials): ?Authenticatable
     {
@@ -49,9 +48,7 @@ final class EcasUserProvider implements UserProvider
         return $this->casUserProvider->retrieveCasUser();
     }
 
-    public function updateRememberToken(Authenticatable $user, $token)
-    {
-    }
+    public function updateRememberToken(Authenticatable $user, $token) {}
 
     public function validateCredentials(Authenticatable $user, array $credentials)
     {
