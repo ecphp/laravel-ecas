@@ -52,5 +52,11 @@
                 "EcPhp\\LaravelEcas\\Providers\\LaravelEcasProvider"
             ]
         }
+    },
+    "scripts": {
+        "changelog-unreleased": "auto-changelog -c .auto-changelog -u",
+        "changelog-version": "auto-changelog -c .auto-changelog -v",
+        "grumphp": "./vendor/bin/grumphp run",
+        "phpunit": "vendor/bin/phpunit"
     }
 }
