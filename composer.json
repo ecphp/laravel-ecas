@@ -16,17 +16,18 @@
         "ext-dom": "*",
         "ext-simplexml": "*",
         "ecphp/ecas": "^3.0",
-        "ecphp/laravel-cas": "0.0.1 || 0.0.2",
-        "laravel/framework": "^9.0 || ^10 || ^11"
+        "ecphp/laravel-cas": "^1.0",
+        "laravel/framework": "^10 || ^11"
     },
     "require-dev": {
         "ecphp/php-conventions": "^1.0",
-        "guzzlehttp/guzzle": "^7.5",
-        "nyholm/psr7": "^1.5",
-        "orchestra/testbench": "^8.22",
-        "phpstan/phpstan-strict-rules": "^1.4",
-        "symfony/cache": "^6.2",
-        "symfony/psr-http-message-bridge": "^2.1"
+        "guzzlehttp/guzzle": "^7.9",
+        "nyholm/psr7": "^1.8",
+        "orchestra/testbench": "^8.26 || ^9.4",
+        "phpstan/phpstan-strict-rules": "^1.6",
+        "roave/security-advisories": "dev-latest",
+        "symfony/cache": "^6.4 || ^7.1",
+        "symfony/psr-http-message-bridge": "^v6.4 || ^7.1"
     },
     "suggest": {},
     "autoload": {
