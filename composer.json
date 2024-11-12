@@ -27,7 +27,7 @@
         "phpstan/phpstan-strict-rules": "^1.6",
         "roave/security-advisories": "dev-latest",
         "symfony/cache": "^6.4 || ^7.1",
-        "symfony/psr-http-message-bridge": "^v6.4 || ^7.1"
+        "symfony/psr-http-message-bridge": "^6.4 || ^7.1"
     },
     "suggest": {},
     "autoload": {
