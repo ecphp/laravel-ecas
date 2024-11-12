@@ -55,6 +55,8 @@ final class EcasUser implements Authenticatable
         return null;
     }
 
+    public function getAuthPasswordName() {}
+
     public function getGroups(): array
     {
         $attributes = $this->getAttributes();
