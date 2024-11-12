@@ -22,6 +22,8 @@ final class EcasUserProvider implements UserProvider
         private CasUserProvider $casUserProvider
     ) {}
 
+    public function rehashPasswordIfRequired(Authenticatable $user, array $credentials, bool $force = false) {}
+
     public function retrieveByCredentials(array $credentials): ?Authenticatable
     {
         $maybeUser = $this->casUserProvider->retrieveByCredentials($credentials);
