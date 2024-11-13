@@ -16,14 +16,14 @@
         "ext-dom": "*",
         "ext-simplexml": "*",
         "ecphp/ecas": "^3.0",
-        "ecphp/laravel-cas": "^1.0",
-        "laravel/framework": "^10 || ^11"
+        "ecphp/laravel-cas": "^1.1",
+        "laravel/framework": "^9 || ^10 || ^11"
     },
     "require-dev": {
         "ecphp/php-conventions": "^1.0",
         "guzzlehttp/guzzle": "^7.9",
         "nyholm/psr7": "^1.8",
-        "orchestra/testbench": "^8.26 || ^9.4",
+        "orchestra/testbench": "^8.26 || ^9.5",
         "phpstan/phpstan-strict-rules": "^1.6",
         "roave/security-advisories": "dev-latest",
         "symfony/cache": "^6.4 || ^7.1",
