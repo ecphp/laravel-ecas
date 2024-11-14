@@ -30,6 +30,11 @@ final class EcasUser implements Authenticatable
         return $this->user->get($key, $default);
     }
 
+    public function getAssuranceLevel(): ?string
+    {
+        return $this->user->getAttribute('assuranceLevel');
+    }
+
     public function getAttribute(string $key, $default = null)
     {
         return $this->user->getAttribute($key, $default);
@@ -56,6 +61,21 @@ final class EcasUser implements Authenticatable
     }
 
     public function getAuthPasswordName(): void {}
+
+    public function getDepartmentNumber(): ?string
+    {
+        return $this->user->getAttribute('departmentNumber');
+    }
+
+    public function getEmail(): ?string
+    {
+        return $this->user->getAttribute('email');
+    }
+
+    public function getFirstName(): ?string
+    {
+        return $this->user->getAttribute('firstName');
+    }
 
     public function getGroups(): array
     {
