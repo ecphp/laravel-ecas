@@ -19,10 +19,10 @@ use Illuminate\Contracts\Auth\UserProvider;
 final class EcasUserProvider implements UserProvider
 {
     public function __construct(
-        private CasUserProvider $casUserProvider
+        private readonly CasUserProvider $casUserProvider
     ) {}
 
-    public function rehashPasswordIfRequired(Authenticatable $user, array $credentials, bool $force = false) {}
+    public function rehashPasswordIfRequired(Authenticatable $user, array $credentials, bool $force = false): void {}
 
     public function retrieveByCredentials(array $credentials): ?Authenticatable
     {
@@ -35,12 +35,12 @@ final class EcasUserProvider implements UserProvider
         return new EcasUser($maybeUser);
     }
 
-    public function retrieveById($identifier)
+    public function retrieveById(mixed $identifier): ?Authenticatable
     {
         return null;
     }
 
-    public function retrieveByToken($identifier, $token)
+    public function retrieveByToken(mixed $identifier, $token): ?Authenticatable
     {
         return null;
     }
@@ -50,9 +50,9 @@ final class EcasUserProvider implements UserProvider
         return $this->casUserProvider->retrieveCasUser();
     }
 
-    public function updateRememberToken(Authenticatable $user, $token) {}
+    public function updateRememberToken(Authenticatable $user, $token): void {}
 
-    public function validateCredentials(Authenticatable $user, array $credentials)
+    public function validateCredentials(Authenticatable $user, array $credentials): bool
     {
         return true;
     }
