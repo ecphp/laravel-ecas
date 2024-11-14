@@ -14,6 +14,7 @@ namespace EcPhp\LaravelEcas\Tests;
 use EcPhp\LaravelCas\Providers\AppServiceProvider;
 use EcPhp\LaravelEcas\Providers\LaravelEcasProvider;
 use EcPhp\LaravelEcas\Tests\Providers\LaravelCasProvider;
+use Illuminate\Foundation\Application;
 use Orchestra\Testbench\TestCase as OrchestraTestCase;
 
 use function dirname;
@@ -26,11 +27,11 @@ abstract class TestCase extends OrchestraTestCase
     /**
      * Get application package providers.
      *
-     * @param  \Illuminate\Foundation\Application $app
+     * @param  Application $app
      *
-     * @return array
+     * @return list<class-string>
      */
-    protected function getPackageProviders($app)
+    protected function getPackageProviders($app): array
     {
         $config = include dirname(__DIR__) . '/vendor/ecphp/laravel-cas/src/publishers/config/laravel-cas.php';
         config(['laravel-cas' => $config]);

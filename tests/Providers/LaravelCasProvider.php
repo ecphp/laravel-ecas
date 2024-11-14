@@ -12,7 +12,6 @@ declare(strict_types=1);
 namespace EcPhp\LaravelEcas\Tests\Providers;
 
 use GuzzleHttp\Client;
-// use Illuminate\Support\ServiceProvider;
 use loophp\psr17\Psr17;
 use loophp\psr17\Psr17Interface;
 use Nyholm\Psr7\Factory\Psr17Factory;

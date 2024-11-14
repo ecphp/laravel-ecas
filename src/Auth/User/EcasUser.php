@@ -18,7 +18,7 @@ use function array_key_exists;
 
 final class EcasUser implements Authenticatable
 {
-    public function __construct(private CasUser $user) {}
+    public function __construct(private readonly CasUser $user) {}
 
     public function __toString(): string
     {
@@ -55,7 +55,7 @@ final class EcasUser implements Authenticatable
         return null;
     }
 
-    public function getAuthPasswordName() {}
+    public function getAuthPasswordName(): void {}
 
     public function getGroups(): array
     {

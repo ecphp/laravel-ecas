@@ -9,11 +9,12 @@
 
 declare(strict_types=1);
 
-namespace Tests\Unit;
+namespace EcPhp\LaravelEcas\Tests\Unit;
 
 use EcPhp\CasLib\Contract\CasInterface;
 use EcPhp\Ecas\Ecas;
 use EcPhp\LaravelEcas\Tests\TestCase;
+use Illuminate\Contracts\Container\BindingResolutionException;
 
 /**
  * @internal
@@ -22,9 +23,7 @@ use EcPhp\LaravelEcas\Tests\TestCase;
  */
 final class CasInterfaceTest extends TestCase
 {
-    private $response;
-
-    public function testIfEcas()
+    public function testIfEcas(): void
     {
         $casInterface = app()->make(CasInterface::class);
         self::assertInstanceOf(Ecas::class, $casInterface);
